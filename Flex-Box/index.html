@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+</head>
+<body>
+
+    <div id="root">
+
+
+    </div>
+    
+
+
+
+    <script>
+       // 1.What tag we are using like div,h1 etc.
+       //2.properties like className.
+       //3.Children / textContent
+       let mainDiv = React.createElement("div",{
+         style:{
+            border:"1px solid black",
+            margin:"5%",
+            backgroundColor:"bisque",
+            display:"flex",
+            // justifyContent:"space-between",
+            height:"130px",
+            width:"70%",
+            fontSize:"50px"     
+          },
+        },"Parent",
+
+       [
+        React.createElement("div",{style:{border:"1px solid black",backgroundColor:"red",paddingLeft:"",height:"80px",width:"80px",margin:"1.9%",marginLeft:"23%"}},"1"),
+        React.createElement("div",{style:{border:"1px solid black",backgroundColor:"yellow",padding:"",height:"80px",width:"80px",margin:"1.9%"}},"2"),
+        React.createElement("div",{style:{border:"1px solid black",backgroundColor:"green",padding:"",height:"80px",width:"80px",margin:"1.9%"}},"3"),
+        React.createElement("div",{style:{border:"1px solid black",backgroundColor:"darkviolet",padding:"",height:"80px",width:"80px",margin:"1.9%"}},"4"),
+       ]
+       
+    )
+    // console.log(mainDiv);
+
+
+       let root = ReactDOM.createRoot(document.getElementById("root"));
+
+       root.render(mainDiv);
+
+    </script>
+</body>
+</html>
